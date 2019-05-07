@@ -64,6 +64,8 @@ canonifyurls = true
   RSSLink = "http://feeds.feedburner.com/..."
   githubName = "vjeantet"
   twitterName = "vjeantet"
+  # link to manifest.json file, allow web to be installable
+  manifest = "manifest.json"
   # facebookName = ""
   # codepenName = ""
   # linkedinName = ""
