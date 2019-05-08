@@ -66,6 +66,7 @@ canonifyurls = true
   twitterName = "vjeantet"
   # link to manifest.json file, allow web to be installable
   manifest = "manifest.json"
+  serviceWorker = "/js/service-worker.js"
   # facebookName = ""
   # codepenName = ""
   # linkedinName = ""

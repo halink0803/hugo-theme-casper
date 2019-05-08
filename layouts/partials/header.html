@@ -102,6 +102,20 @@
     {{ if .Site.Params.customHeaderPartial }}
         {{ partial .Site.Params.customHeaderPartial . }}
     {{ end }}
+    {{ if .Site.Params.serviceWorker }} 
+    <script type="text/javascript">
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('{{ .Site.Params.serviceWorker }}')
+          .then((reg) => {
+            console.log('Service worker registered.', reg);
+          }).catch(function(err) {
+            console.log('Service worker register failed.', err);
+          });
+        });
+      }
+    </script>
+    {{ end }}
 </head>
 <body class="nav-closed">
 
